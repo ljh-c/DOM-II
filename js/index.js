@@ -7,9 +7,11 @@ contentImages.forEach(image => {
     image.addEventListener('mouseover', event => image.src = "img/woman-traveling.jpg");
 });
 
-// sampleButton.addEventListener('click', (event) => {
-//     alert('You Clicked the Sample Button!')
-//   })
+// click
+
+let contactLink = document.querySelector('.nav-link:last-child');
+
+contactLink.addEventListener('click', event => alert('Under Construction!'));
 
 // mouseover
 //  wheel *
