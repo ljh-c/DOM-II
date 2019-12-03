@@ -90,6 +90,20 @@ selection.addEventListener('change', (event) => {
     msg.textContent = `The ${event.target.value} getaway is $2,880`;
 });
 
+// focus & blur
+
+const field = document.querySelectorAll('input[type="text"]');
+
+field.forEach(element => {
+    element.addEventListener('focus', event => {
+        event.target.style.background = '#FFEBCD';
+    })
+
+    element.addEventListener('blur', event => {
+        event.target.style.background = '';
+    })
+})
+
 // newImagineSection.className = 'content-destination imagine';
 
 /* <section id="contact">
