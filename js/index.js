@@ -116,31 +116,18 @@ field.forEach(element => {
     })
 });
 
+// stop navigation items from refreshing page
 
+const links = document.querySelectorAll('.nav-link');
 
-/* <section id="contact">
-        <h2>Get In Touch</h2>
-        <div>
-            <form method="post" action="#">
-              <label for="fname">Full Name</label>
-              <input type="text" id="fname" name="fullname" placeholder="First and last name">
-          
-              <label for="eaddress">Email</label>
-              <input type="text" id="eaddress" name="emailaddress" placeholder="Your email">
+links.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    
+});
 
-              <label for="package">Destination</label>
-              <select id="package" name="package">
-                <option value="beach">Fun In The Sun</option>
-                <option value="mountain">Mountain Excursion</option>
-                <option value="island">Island Getaway</option>
-              </select>
-            
-              <textarea name="message" id="message" placeholder="Special instructions" rows="4"></textarea>
-
-              <input type="submit" value="Take Me Away">
-            </form>
-        </div>
-    </section> */
 
 // mouseover
 //  wheel *
