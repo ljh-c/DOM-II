@@ -1,1 +1,31 @@
-// Your code goes here
+// mouseover
+// consider: overlaying text on mouseover instead
+
+let contentImages = document.querySelectorAll('.content-section img');
+
+contentImages.forEach(image => {
+    image.addEventListener('mouseover', event => image.src = "img/woman-traveling.jpg");
+});
+
+// sampleButton.addEventListener('click', (event) => {
+//     alert('You Clicked the Sample Button!')
+//   })
+
+// mouseover
+//  wheel *
+//  drag / drop * 
+//  load *
+//  focus
+//  resize
+//  scroll
+//  select
+//  dblclick
+//  keydown or keypress
+// Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
+
+//  Nest two similar events somewhere in the site and prevent the event propagation properly
+//  Stop the navigation items from refreshing the page by using preventDefault()
+
+// alert
+// mouseenter
+// mouseleave
