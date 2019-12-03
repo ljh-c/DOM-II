@@ -13,6 +13,14 @@ let contactLink = document.querySelector('.nav-link:last-child');
 
 contactLink.addEventListener('click', event => alert('Under Construction!'));
 
+// dblclick
+
+let destinationImage = document.querySelector('.content-destination img');
+
+console.log(destinationImage);
+
+destinationImage.addEventListener('dblclick', event => destinationImage.style.border = '12px dashed #17A2B8');
+
 // mouseover
 //  wheel *
 //  drag / drop * 
