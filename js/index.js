@@ -76,6 +76,45 @@ window.addEventListener('resize', () => {
     navigationBar.style.background = '#FFEBCD';
 });
 
+// change
+
+let newContactSection = document.createElement('section');
+newContactSection.innerHTML = "<h4>Get In Touch</h4><div><form method=\"post\"></form><label>Name</label><input type=\"text\" placeholder=\"Full name\"><form method=\"post\"></form><label>Email</label><input type=\"text\" placeholder=\"Your email\"><label>Destination</label><select class=\"getaway\"><option value=\"\">Select One...</option><option value=\"beach\">Fun in the Sun</option></select></label><p class=\"message\"></p></div>";
+
+homeContent.appendChild(newContactSection);
+
+const selection = document.querySelector('.getaway');
+
+selection.addEventListener('change', (event) => {
+    const msg = document.querySelector('.message');
+    msg.textContent = `The ${event.target.value} getaway is $2,880`;
+});
+
+// newImagineSection.className = 'content-destination imagine';
+
+/* <section id="contact">
+        <h2>Get In Touch</h2>
+        <div>
+            <form method="post" action="#">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="fullname" placeholder="First and last name">
+          
+              <label for="eaddress">Email</label>
+              <input type="text" id="eaddress" name="emailaddress" placeholder="Your email">
+
+              <label for="package">Destination</label>
+              <select id="package" name="package">
+                <option value="beach">Fun In The Sun</option>
+                <option value="mountain">Mountain Excursion</option>
+                <option value="island">Island Getaway</option>
+              </select>
+            
+              <textarea name="message" id="message" placeholder="Special instructions" rows="4"></textarea>
+
+              <input type="submit" value="Take Me Away">
+            </form>
+        </div>
+    </section> */
 
 // mouseover
 //  wheel *
