@@ -17,9 +17,28 @@ contactLink.addEventListener('click', event => alert('Under Construction!'));
 
 let destinationImage = document.querySelector('.content-destination img');
 
-console.log(destinationImage);
-
 destinationImage.addEventListener('dblclick', event => destinationImage.style.border = '12px dashed #17A2B8');
+
+// keydown
+
+let newImagineSection = document.createElement('section');
+newImagineSection.innerHTML = "<h4>Just Imagine</h4><p>Where do you want to go? Click here and start typing.</p><p id=\"log\"></p>";
+newImagineSection.className = 'content-destination imagine';
+
+let homeContent = document.querySelector('.home');
+
+homeContent.appendChild(newImagineSection);
+
+let imagineSection = document.querySelector('.imagine');
+
+document.addEventListener('keydown', event => {    
+    const charList = 'abcdefghijklmnopqrstuvwxyz ';
+    const key = event.key.toLowerCase();
+
+    if (charList.indexOf(key) !== -1) {
+        log.textContent += `${event.key}`;
+    }
+});
 
 // mouseover
 //  wheel *
