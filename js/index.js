@@ -1,5 +1,4 @@
 // mouseover
-// consider: overlaying text on mouseover instead
 
 let contentImages = document.querySelectorAll('.content-section img');
 
@@ -69,8 +68,13 @@ imagineBox.addEventListener('mouseleave', () => {
     pricing.style.textShadow = '3px 3px black';
 });
 
+// resize
 
+let navigationBar = document.querySelector('.main-navigation');
 
+window.addEventListener('resize', () => {
+    navigationBar.style.background = '#FFEBCD';
+});
 
 
 // mouseover
