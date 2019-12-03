@@ -10,7 +10,10 @@ contentImages.forEach(image => {
 
 let contactLink = document.querySelector('.nav-link:last-child');
 
-contactLink.addEventListener('click', event => alert('Under Construction!'));
+contactLink.addEventListener('click', event => {
+    alert('Under Construction!');
+    event.stopPropagation();
+});
 
 // dblclick
 
@@ -76,10 +79,19 @@ window.addEventListener('resize', () => {
     navigationBar.style.background = '#FFEBCD';
 });
 
+// change navigation border color on click
+// to demonstrate stop propagation on Contact link
+
+navigationBar.addEventListener('click', () => {
+    navigationBar.style.borderBottom= '12px dashed #17A2B8';
+});
+
 // change
 
 let newContactSection = document.createElement('section');
-newContactSection.innerHTML = "<h4>Get In Touch</h4><div><form method=\"post\"></form><label>Name</label><input type=\"text\" placeholder=\"Full name\"><form method=\"post\"></form><label>Email</label><input type=\"text\" placeholder=\"Your email\"><label>Destination</label><select class=\"getaway\"><option value=\"\">Select One...</option><option value=\"beach\">Fun in the Sun</option></select></label><p class=\"message\"></p></div>";
+newContactSection.innerHTML = "<h4>Get In Touch</h4><div><form method=\"post\"></form><label>Name</label><input type=\"text\" placeholder=\"Full name\"><form method=\"post\"></form><label>Email</label><input type=\"text\" placeholder=\"Your email\"><label>Destination</label><select class=\"getaway\"><option value=\"\">Select One...</option><option value=\"beach\">Fun in the Sun</option></select></label><p class=\"message\"></p></div><div class=\"btn\">Take Me Away!</div>";
+
+newContactSection.className = 'destination';
 
 homeContent.appendChild(newContactSection);
 
@@ -102,9 +114,9 @@ field.forEach(element => {
     element.addEventListener('blur', event => {
         event.target.style.background = '';
     })
-})
+});
 
-// newImagineSection.className = 'content-destination imagine';
+
 
 /* <section id="contact">
         <h2>Get In Touch</h2>
