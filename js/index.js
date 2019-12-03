@@ -125,9 +125,17 @@ links.forEach(link => {
         event.preventDefault();
         event.stopPropagation();
     });
-    
 });
 
+// animates header image
+
+document.querySelector('header img').addEventListener("click", () => {
+    gsap.to('header img', {
+        duration: 2,
+        rotateY: 180,
+        ease: "slow(1, 0.75, false)"
+    })
+})
 
 // mouseover
 //  wheel *
